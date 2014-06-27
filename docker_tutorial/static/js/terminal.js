@@ -460,7 +460,7 @@
       return "2013/07/08 23:51:21 Error: No such container: " + keyword;
     };
     commit_containerid = "effb66b31edb";
-    help = "Docker tutorial \n\nThe Docker tutorial is a Docker emulater intended to help novice users get up to spead with the standard Dockercommands. This terminal contains a limited Docker and a limited shell emulator. Therefore some of the commandsyou would expect do not exist.\n\nJust follow the steps and questions. If you are stuck, click on the 'expected command' to see what the commandshould have been. Leave feedback if you find things confusing.    ";
+    help = "Docker tutorial \n\nThe Docker tutorial is a Docker emulater intended to help novice users get up to speed with the standard Dockercommands. This terminal contains a limited Docker and a limited shell emulator. Therefore some of the commandsyou would expect do not exist.\n\nJust follow the steps and questions. If you are stuck, click on the 'expected command' to see what the commandshould have been. Leave feedback if you find things confusing.    ";
     images = "ubuntu                latest              8dbd9e392a96        4 months ago        131.5 MB (virtual 131.5 MB)\nlearn/tutorial        latest              8dbd9e392a96        2 months ago        131.5 MB (virtual 131.5 MB)\nlearn/ping            latest              effb66b31edb        10 minutes ago      11.57 MB (virtual 143.1 MB)";
     inspect = "\nUsage: Docker inspect CONTAINER|IMAGE [CONTAINER|IMAGE...]\n\nReturn low-level information on a container/image\n";
     inspect_no_such_container = function(keyword) {
