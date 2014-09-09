@@ -18,9 +18,8 @@ q = []
 q.push ({
 html: """
       <h3>Getting started</h3>
-      <p>There are actually two programs: The Docker daemon, which is a server process and which manages all the
-      containers, and the Docker client, which acts as a remote control on the daemon. On most systems, like in this
-      emulator, both execute on the same host.</p>
+      <p>There are two programs. First, the Docker daemon--a server process responsible for managing all of the containers. In addition, the Docker client functions as a remote control for the daemon, 
+On most systems, like in this emulator, both function on the same host.</p>
       """
 assignment: """
       <h3>Assignment</h3>
@@ -29,7 +28,7 @@ assignment: """
       you know you are all set.</p>
       """
 tip: "<p>Try typing <code>docker</code> to see the full list of accepted arguments</p>
-      <p>This emulator provides only a limited set of shell and Docker commands, so some commands may not work as expected</p>"
+      <p>This emulator provides a limited set of shell and Docker commands, so some commands may not work as expected</p>"
 command_expected: ['docker', 'version']
 result: """<p>Well done! Let's move to the next assignment.</p>"""
 })
@@ -37,7 +36,7 @@ result: """<p>Well done! Let's move to the next assignment.</p>"""
 q.push ({
 html: """
       <h3>Searching for images</h3>
-      <p>The easiest way to get started is to use a container image from someone else. Container images are
+      <p>The easiest way to get started is to use an already created container image. Container images are
       available on the Docker index, a central place to store images. You can find them online at
       <a href="#1" onClick="window.open('http://index.docker.io','Docker Index','width=1000,height=900,left=50,top=50,menubar=0')";>index.docker.io</a>
       and by using the commandline</p>
@@ -64,9 +63,9 @@ assignment:
       <p>Please download the tutorial image you have just found</p>
       """
 command_expected: ['docker', 'pull', 'learn/tutorial']
-result: """<p>Cool. Look at the results. You'll see that Docker has downloaded a number of layers. In Docker all images (except the base image) are made up of several cumulative layers.</p>"""
+result: """<p>Cool. Look at the results. You'll see that Docker has downloaded a number of layers. In Docker, all images (except the base image) are made up of several cumulative layers.</p>"""
 tip: """<p>Don't forget to pull the full name of the repository e.g. 'learn/tutorial'</p>
-     <p>Look under 'show expected command if you're stuck.</p>
+     <p>Look under 'show expected command' if you're stuck.</p>
      """
 })
 
@@ -95,7 +94,7 @@ intermediateresults: [
   () -> """<p>You've got the arguments right. Did you get the command? Try <em>/bin/bash </em>?</p>"""
   ]
 tip: """
-     <p>The command <code>docker run</code> takes a minimum of two arguments. An image name, and the command you want to execute
+     <p>The command <code>docker run</code> takes a minimum of two arguments. An image name and the command you want to execute
      within that image.</p>
      <p>Check the expected command below if it does not work as expected</p>
     """
