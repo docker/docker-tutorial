@@ -8,11 +8,11 @@ function check_form ()
 	$('#level2_error5').hide();
 	$('#level2_error6').hide();
 	$('#level2_error7').hide();
-	
-	$('#no_good').hide();	
-	$('#some_good').hide();		
+
+	$('#no_good').hide();
+	$('#some_good').hide();
 	$('#all_good').hide();
-	
+
 	var a = clean_input($('#level2_q0').val()).toUpperCase();
 	var b = clean_input($('#level2_q1').val()).toUpperCase();
 	var c = clean_input($('#level2_q2').val()).toUpperCase();
@@ -23,7 +23,7 @@ function check_form ()
 	var h = clean_input($('#level2_q7').val()).toUpperCase();
 	var points = 0;
 
-	if (a == 'FROM')
+	if (a === 'FROM')
 	{
 		points = points + 1;
 	}
@@ -31,7 +31,7 @@ function check_form ()
 	{
 		$('#level2_error0').show();
 	}
-	if (b == 'RUN')
+	if (b === 'RUN')
 	{
 		points = points + 1;
 	}
@@ -39,7 +39,7 @@ function check_form ()
 	{
 		$('#level2_error1').show();
 	}
-	if (c == 'MAINTAINER')
+	if (c === 'MAINTAINER')
 	{
 		points = points + 1;
 	}
@@ -47,7 +47,7 @@ function check_form ()
 	{
 		$('#level2_error2').show();
 	}
-	if (d == '#')
+	if (d === '#')
 	{
 		points = points + 1;
 	}
@@ -56,7 +56,7 @@ function check_form ()
 		$('#level2_error3').show();
 	}
 
-	if (e == 'ENTRYPOINT' || e == 'CMD')
+	if (e === 'ENTRYPOINT' || e === 'CMD')
 	{
 		points = points + 1;
 	}
@@ -64,8 +64,8 @@ function check_form ()
 	{
 		$('#level2_error4').show();
 	}
-	
-	if (f == 'USER')
+
+	if (f === 'USER')
 	{
 		points = points + 1;
 	}
@@ -73,8 +73,8 @@ function check_form ()
 	{
 		$('#level2_error5').show();
 	}
-	
-	if (g == 'EXPOSE')
+
+	if (g === 'EXPOSE')
 	{
 		points = points + 1;
 	}
@@ -82,7 +82,7 @@ function check_form ()
 	{
 		$('#level2_error6').show();
 	}
-	if (h == 'ENTRYPOINT' || h == 'CMD')
+	if (h === 'ENTRYPOINT' || h === 'CMD')
 	{
 		points = points + 1;
 	}
@@ -90,15 +90,15 @@ function check_form ()
 	{
 		$('#level2_error7').show();
 	}
-	
-	
-	if (points == 8) // all good
-	{	
+
+
+	if (points === 8) // all good
+	{
 		$('#all_good').show();
 	}
-	else if (points == 0) // nothing good
+	else if (points === 0) // nothing good
 	{
-		$('#no_good').show();	
+		$('#no_good').show();
 	}
 	else // some good some bad
 	{
@@ -111,7 +111,7 @@ function check_fill()
 {
 	$('#dockerfile_ok').hide();
 	$('#dockerfile_ko').hide();
-	
+
 	var from = clean_input($('#from').val()).toUpperCase();
 	var ubuntu = clean_input($('#ubuntu').val()).toUpperCase();
 	var maintainer = clean_input($('#maintainer').val()).toUpperCase();
@@ -128,7 +128,7 @@ function check_fill()
 	var user = clean_input($('#user').val()).toUpperCase();
 	var expose = clean_input($('#expose').val()).toUpperCase();
 	var gcc = clean_input($('#gcc').val()).toUpperCase();
-	
+
 	$('#from').attr("class", "input-small");
 	$('#ubuntu').attr("class", "input-small");
 	$('#maintainer').attr("class", "input-small");
@@ -141,97 +141,97 @@ function check_fill()
 	$('#run4').attr("class", "input-small");
 	$('#run5').attr("class", "input-small");
 	$('#run6').attr("class", "input-small");
-	
+
 	$('#entrypoint').attr("class", "input-small");
 	$('#user').attr("class", "input-small");
 	$('#expose').attr("class", "input-small");
 	$('#gcc').attr("class", "input-small");
-	
+
 	var errors = 0;
-	
-	if (from != "FROM")
+
+	if (from !== "FROM")
 	{
 		$('#from').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (ubuntu != "UNTU")
+	if (ubuntu !== "UNTU")
 	{
 		$('#ubuntu').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (maintainer != "AINER")
+	if (maintainer !== "AINER")
 	{
 		$('#maintainer').attr("class", "input-small error_input");
 		errors = errors + 1;
-	}	
-	if (eric != "BERTO")
+	}
+	if (eric !== "BERTO")
 	{
 		$('#eric').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (bardin != "SHIOKA")
+	if (bardin !== "SHIOKA")
 	{
 		$('#bardin').attr("class", "input-small error_input");
 		errors = errors + 1;
-	}	
-	if (run0 != "RUN")
+	}
+	if (run0 !== "RUN")
 	{
 		$('#run0').attr("class", "input-small error_input");
 		errors = errors + 1;
-	}	
-	if (run1 != "RUN")
+	}
+	if (run1 !== "RUN")
 	{
 		$('#run1').attr("class", "input-small error_input");
 		errors = errors + 1;
-	}	
-	if (run2 != "RUN")
+	}
+	if (run2 !=== "RUN")
 	{
 		$('#run2').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (run3 != "RUN")
+	if (run3 !== "RUN")
 	{
 		$('#run3').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (run4 != "RUN")
+	if (run4 !== "RUN")
 	{
 		$('#run4').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (run5 != "RUN")
+	if (run5 !== "RUN")
 	{
 		$('#run5').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (run6 != "RUN")
+	if (run6 !== "RUN")
 	{
 		$('#run6').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
 
-	if (gcc != "GCC")
+	if (gcc !== "GCC")
 	{
 		$('#gcc').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (entrypoint != "ENTRYPOINT")
+	if (entrypoint !== "ENTRYPOINT")
 	{
 		$('#entrypoint').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (user != "USER")
+	if (user !== "USER")
 	{
 		$('#user').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
-	if (expose != "EXPOSE")
+	if (expose !== "EXPOSE")
 	{
 		$('#expose').attr("class", "input-small error_input");
 		errors = errors + 1;
 	}
 
-	if (errors != 0)
+	if (errors !== 0)
 	{
 		$('#dockerfile_ko').show();
 	}
