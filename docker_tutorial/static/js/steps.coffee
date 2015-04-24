@@ -30,7 +30,7 @@ assignment: """
       """
 tip: "<p>Try typing <code>docker</code> to see the full list of accepted arguments</p>
       <p>This emulator provides only a limited set of shell and Docker commands, so some commands may not work as expected</p>"
-command_expected: ['docker', 'version']
+command_expected: ['docker', '^version']
 result: """<p>Well done! Let's move to the next assignment.</p>"""
 })
 
