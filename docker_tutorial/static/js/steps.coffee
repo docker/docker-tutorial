@@ -165,7 +165,7 @@ assignment: """
       <p>Run the ping program to ping www.google.com</p>
 
       """
-command_expected: ["docker", "run", 'learn/ping', 'ping', 'google.com' ]
+command_expected: ["docker", "run", 'learn/ping', 'ping', '^google.com' ]
 result: """<p>That worked! Note that normally you can use Ctrl-C to disconnect. The container will keep running. This
         container will disconnect automatically.</p>"""
 intermediateresults: [ () -> """You have not specified a repository name. This is not wrong, but giving your images a name

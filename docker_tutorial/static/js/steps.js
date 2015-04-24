@@ -88,7 +88,7 @@
   q.push({
     html: "<h3>Run your new image</h3>\n<p>Now you have basically setup a complete, self contained environment with the 'ping' program installed. </p>\n<p>Your image can now be run on any host that runs Docker.</p>\n<p>Lets run this image on this machine.</p>",
     assignment: "<h3>Assignment</h3>\n<p>Run the ping program to ping www.google.com</p>\n",
-    command_expected: ["docker", "run", 'learn/ping', 'ping', 'google.com'],
+    command_expected: ["docker", "run", 'learn/ping', 'ping', '^google.com'],
     result: "<p>That worked! Note that normally you can use Ctrl-C to disconnect. The container will keep running. This\ncontainer will disconnect automatically.</p>",
     intermediateresults: [
       function() {
