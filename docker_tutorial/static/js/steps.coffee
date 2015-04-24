@@ -46,7 +46,7 @@ assignment: """
       <h3>Assignment</h3>
       <p>Use the commandline to search for an image called tutorial</p>
       """
-command_expected: ['docker', 'search', 'tutorial']
+command_expected: ['docker', 'search', '^tutorial$']
 result: """<p>You found it!</p>"""
 tip: "the format is <code>docker search &lt;string&gt;</code>"
 })

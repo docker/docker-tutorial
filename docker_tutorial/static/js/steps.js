@@ -29,7 +29,7 @@
   q.push({
     html: "<h3>Searching for images</h3>\n<p>The easiest way to get started is to use a container image from someone else. Container images are\navailable on the Docker index, a central place to store images. You can find them online at\n<a href=\"#1\" onClick=\"window.open('http://index.docker.io','Docker Index','width=1000,height=900,left=50,top=50,menubar=0')\";>index.docker.io</a>\nand by using the commandline</p>",
     assignment: "<h3>Assignment</h3>\n<p>Use the commandline to search for an image called tutorial</p>",
-    command_expected: ['docker', 'search', 'tutorial'],
+    command_expected: ['docker', 'search', '^tutorial$'],
     result: "<p>You found it!</p>",
     tip: "the format is <code>docker search &lt;string&gt;</code>"
   });
