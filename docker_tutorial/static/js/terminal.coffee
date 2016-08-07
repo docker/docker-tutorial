@@ -495,7 +495,7 @@ do @myTerminal = ->
     "
 Docker tutorial \n
 \n
-The Docker tutorial is a Docker emulater intended to help novice users get up to spead with the standard Docker
+The Docker tutorial is a Docker emulator intended to help novice users get up to speed with the standard Docker
 commands. This terminal contains a limited Docker and a limited shell emulator. Therefore some of the commands
 you would expect do not exist.\n
 \n
