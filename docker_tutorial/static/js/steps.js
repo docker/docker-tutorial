@@ -22,7 +22,7 @@
     html: "<h3>Getting started</h3>\n<p>There are actually two programs: The Docker daemon, which is a server process and which manages all the\ncontainers, and the Docker client, which acts as a remote control on the daemon. On most systems, like in this\nemulator, both execute on the same host.</p>",
     assignment: "<h3>Assignment</h3>\n<p>Check which Docker versions are running</p>\n<p>This will help you verify the daemon is running and you can connect to it. If you see which version is running\nyou know you are all set.</p>",
     tip: "<p>Try typing <code>docker</code> to see the full list of accepted arguments</p>      <p>This emulator provides only a limited set of shell and Docker commands, so some commands may not work as expected</p>",
-    command_expected: ['docker', 'version'],
+    command_expected: ['docker', '^version'],
     result: "<p>Well done! Let's move to the next assignment.</p>"
   });
 
